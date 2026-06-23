@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九游娱乐 · 简明指南与访问提示</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f9fc;
+      color: #1f2f3a;
+      line-height: 1.6;
+      padding: 0 1rem 2rem;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    /* hero 横幅 */
+    .hero {
+      background: linear-gradient(138deg, #114b5f 0%, #2b7a78 70%, #3aafa9 100%);
+      border-radius: 0 0 48px 48px;
+      padding: 3rem 1.5rem 2.8rem;
+      margin: 0 -1rem 2rem;
+      text-align: center;
+      color: #ecf9f7;
+      box-shadow: 0 10px 20px -8px rgba(17, 75, 95, 0.25);
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.3rem;
+      word-break: keep-all;
+    }
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #c5eae7;
+      border-top: 2px solid rgba(255,255,255,0.25);
+      display: inline-block;
+      padding-top: 0.6rem;
+      margin-top: 0.2rem;
+    }
+    /* 背景说明卡片 */
+    .bg-card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.6rem 1.8rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+      border-left: 6px solid #3aafa9;
+      font-size: 1rem;
+    }
+    .bg-card strong {
+      color: #1f6c6b;
+    }
+    /* 网格卡片系统 — 三段介绍 */
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 2.2rem;
+    }
+    .guide-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem 1.2rem;
+      box-shadow: 0 6px 12px rgba(42, 122, 120, 0.06);
+      transition: transform 0.15s ease;
+      border-bottom: 3px solid #b6e2df;
+    }
+    .guide-card:hover {
+      transform: translateY(-3px);
+      border-bottom-color: #2b7a78;
+    }
+    .guide-card .card-icon {
+      font-size: 1.8rem;
+      display: inline-block;
+      background: #d9f0ee;
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+      text-align: center;
+      border-radius: 50%;
+      margin-bottom: 0.8rem;
+      color: #114b5f;
+    }
+    .guide-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #1a4e5a;
+    }
+    .guide-card p {
+      font-size: 0.94rem;
+      color: #2f4858;
+    }
+    /* 访问提示 + FAQ 摘要混合区 */
+    .notice-area {
+      background: #eaf6f5;
+      border-radius: 28px;
+      padding: 1.8rem 1.8rem 1.5rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.2rem;
+    }
+    .notice-left {
+      flex: 2 1 220px;
+    }
+    .notice-left h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #114b5f;
+      margin-bottom: 0.5rem;
+    }
+    .notice-left p {
+      margin-bottom: 0.6rem;
+      font-size: 0.96rem;
+    }
+    .notice-left .faq-item {
+      background: white;
+      border-radius: 40px;
+      padding: 0.5rem 1rem 0.5rem 1.2rem;
+      margin: 0.6rem 0;
+      display: inline-block;
+      font-size: 0.9rem;
+      color: #114b5f;
+      border: 1px solid #b5d8d4;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .notice-right {
+      flex: 1 1 160px;
+      background: white;
+      border-radius: 40px;
+      padding: 1rem 1.2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .notice-right p {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      color: #3a5f6b;
+    }
+    .notice-right .link-sentence {
+      font-size: 1rem;
+      background: #ffffff;
+      padding: 0.2rem 0;
+    }
+    .notice-right a {
+      color: #1a7a74;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid #3aafa9;
+      padding-bottom: 1px;
+    }
+    .notice-right a:hover {
+      background: #d2f0ed;
+    }
+    /* 页尾 */
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5b7a82;
+      border-top: 2px dashed #cbdcd9;
+      padding-top: 1.6rem;
+      margin-top: 0.5rem;
+      letter-spacing: 0.3px;
+    }
+    .footer-note span {
+      background: #d2e7e4;
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+    }
+    /* 响应式 */
+    @media (max-width: 700px) {
+      .hero h1 { font-size: 1.8rem; }
+      .guide-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .notice-area { flex-direction: column; }
+      .bg-card { padding: 1.2rem; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 2.2rem 1rem 2rem; }
+      .guide-card { padding: 1.2rem; }
+      .notice-left h2 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- hero 横幅 -->
+  <div class="hero">
+    <h1>九游娱乐 · 简明指南</h1>
+    <div class="sub">从访问前准备到内容探索，一份知识型速览</div>
+  </div>
+
+  <!-- 背景说明：简短背景 -->
+  <div class="bg-card">
+    <strong>▍ 关于这个指南</strong> 许多人第一次接触 <a href="https://mobilem-jiuyou.com" style="color:#1a7a74; font-weight:500; text-decoration:underline;">九游娱乐</a> 时，最关心的往往是：如何快速了解其内容方向、访问时有哪些注意点。本篇从实用角度出发，梳理三个核心板块，帮助你建立清晰的认知框架，让每次浏览都更有条理。
+  </div>
+
+  <!-- 三段自然介绍：网格卡片 -->
+  <div class="guide-grid">
+    <div class="guide-card">
+      <div class="card-icon">🎯</div>
+      <h3>定位与内容基调</h3>
+      <p>九游娱乐围绕休闲体验与信息聚合展开，风格偏向轻量、直观。无论是浏览推荐还是自助查阅，界面结构都尽量降低认知负担。熟悉其分类逻辑后，可以更快找到感兴趣的主题区域。</p>
+    </div>
+    <div class="guide-card">
+      <div class="card-icon">📌</div>
+      <h3>访问环境的简单确认</h3>
+      <p>建议使用现代浏览器访问，保持网络通畅。部分交互模块可能依赖 JavaScript，确保浏览器未禁用。移动端适配友好，竖屏浏览时卡片与列表会自动调整为单列布局，阅读体验连贯。</p>
+    </div>
+    <div class="guide-card">
+      <div class="card-icon">🧩</div>
+      <h3>内容探索路径</h3>
+      <p>不必一次性浏览所有板块。从首页导航入手，依次查看分类条目；或直接使用站内搜索功能定位关键词。收藏常用页面，下次访问时更高效。整体内容更新有一定节奏，适合定期回来看看。</p>
+    </div>
+  </div>
+
+  <!-- 访问提示 + FAQ 摘要 -->
+  <div class="notice-area">
+    <div class="notice-left">
+      <h2>🔔 访问提醒 & 常见小问</h2>
+      <p>在浏览 <strong>九游娱乐</strong> 时，你可能会遇到这些细节：</p>
+      <div class="faq-item">❓ 页面加载稍慢？先检查网络或尝试刷新。</div>
+      <div class="faq-item">❓ 想回到首页？导航栏 logo 或 “主页” 链接均可。</div>
+      <div class="faq-item">❓ 内容排列有变？可能是响应式布局根据屏幕宽度调整。</div>
+      <p style="font-size:0.9rem; margin-top:0.8rem;">以上都是正常使用中的常见情形，保持平常心即可。</p>
+    </div>
+    <div class="notice-right">
+      <p style="font-weight:500;">📎 直接前往</p>
+      <div class="link-sentence">
+        了解 <a href="https://mobilem-jiuyou.com">九游娱乐</a> 的更多细节
+      </div>
+      <p style="margin-top:0.5rem; font-size:0.8rem; color:#4b6f78;">无中介 · 原始链接</p>
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <div class="footer-note">
+    <span>杂志专题式 · 简明指南</span> — 内容基于知识型视角整理，不构成任何引导或承诺。访问前请自行判断。
+  </div>
+</div>
+</body>
+</html>
